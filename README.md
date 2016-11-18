@@ -2,9 +2,12 @@
 
 This my Spring MVC project.
 This is a project I develop to learn about the concepts of Spring framework.
-This is not a finished project, so some functions may not work properly.
+This is a project that is still underdeveloped, so some functions may not work properly now.
 
-Different users may have different configuration on MySQL server.
+The first step is to add CURD functionalities to the application.
+The next step is to add different user types.
+
+Different users have different functionalities in the application.
 Note: 
 The database SQL script for the USERS table:
 
