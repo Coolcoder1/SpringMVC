@@ -23,27 +23,21 @@ public class HomeController {
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
 	/**
-	 * Simply selects the home view to render by returning its name.
+	 * This is the home page when run the program
+	 * @param locale
+	 * @param model
+	 * @return
 	 */
-	/**
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
+	public String loginPage(Locale locale, Model model){
 		logger.info("Welcome home! The client locale is {}.", locale);
 		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
 		
-		String formattedDate = dateFormat.format(date);
+		String formattedDate= dateFormat.format(date);
 		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "home";
-	}
-	**/
-	
-	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String loginPage(Locale locale, Model model){
+		model.addAttribute("serverTime", formattedDate);
 		return "login";
 	}
 	

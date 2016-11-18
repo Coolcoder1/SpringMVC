@@ -14,5 +14,7 @@
 	<input type = "password" name="psword"><br>
     <input type ="submit" value="Login">
 </form>
+
+<P>  The time on the server is ${serverTime}. </P>
 </body>
 </html>
