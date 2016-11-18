@@ -6,12 +6,15 @@ import java.util.Locale;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.example.spring.service.UserService;
 import com.example.spring.user.User;
 
 /**
@@ -21,6 +24,15 @@ import com.example.spring.user.User;
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	
+	private UserService userService;
+	
+	@Autowired(required=true)
+	@Qualifier(value="userService")
+	public void setUserService(UserService us){
+		this.userService = us;
+	}
+	
 	
 	/**
 	 * This is the home page when run the program
@@ -41,11 +53,20 @@ public class HomeController {
 		return "login";
 	}
 	
+
 	@RequestMapping(value = "/user", method = RequestMethod.POST)
 	public String login(@Validated User user, Model model){
 		model.addAttribute("firstName", user.getFirstName());
 		return "user";
 	}
+	
+	@RequestMapping(value = "/users", method = RequestMethod.GET)
+	public String listUsers(Model model){
+		model.addAttribute("user", new User());
+		model.addAttribute("listUsers", this.userService.listUsers());
+		return "userList";
+	}
+	
 	
 	
 }

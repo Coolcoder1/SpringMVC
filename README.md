@@ -1,9 +1,10 @@
 # SpringMVC
 
 This my Spring MVC project.
-
+This is a project I develop to learn about the concepts of Spring framework.
+This is not a finished project, so some functions may not work properly.
 Note: 
-The database sql script for the USERS table:
+The database SQL script for the USERS table:
 
  CREATE TABLE `USERS`(
   `id` int (11) unsigned NOT NULL AUTO_INCREMENT,
