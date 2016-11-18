@@ -1,14 +1,15 @@
 # SpringMVC
 
-This my Spring MVC project.
+
 This is a project I develop to learn about the concepts of Spring framework.
-This is a project that is still underdeveloped, so some functions may not work properly now.
+The project is still underdeveloped, so some functions may not work properly now.
 
 The first step is to add CURD functionalities to the application.
 The next step is to add different user types.
 
 Different users have different functionalities in the application.
-Note: 
+
+#Note: 
 The database SQL script for the USERS table:
 
  CREATE TABLE `USERS`(
