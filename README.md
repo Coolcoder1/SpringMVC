@@ -3,6 +3,8 @@
 This my Spring MVC project.
 This is a project I develop to learn about the concepts of Spring framework.
 This is not a finished project, so some functions may not work properly.
+
+Different users may have different configuration on MySQL server.
 Note: 
 The database SQL script for the USERS table:
 
