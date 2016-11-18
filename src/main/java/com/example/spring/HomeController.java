@@ -43,7 +43,7 @@ public class HomeController {
 	
 	@RequestMapping(value = "/user", method = RequestMethod.POST)
 	public String login(@Validated User user, Model model){
-		model.addAttribute("userName", user.getUserName());
+		model.addAttribute("firstName", user.getFirstName());
 		return "user";
 	}
 	

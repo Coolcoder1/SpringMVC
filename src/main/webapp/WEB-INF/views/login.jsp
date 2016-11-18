@@ -8,11 +8,12 @@
 <body>
 
 <form action="user"  method="post">
-	Username: 
-	<input type = "text" name="userName"><br>
-	Password
-	<input type = "password" name="psword"><br>
-    <input type ="submit" value="Login">
+	First Name: 
+	<input type = "text" name="firstName"><br>
+	Last Name:
+	<input type = "text" name="lastName"><br>
+    <input type ="submit" value="Get Info">
+    <input type ="button" value="Sign Up">
 </form>
 
 <P>  The time on the server is ${serverTime}. </P>
