@@ -8,8 +8,11 @@
 <body>
 
 <form action="user"  method="post">
+	Username: 
 	<input type = "text" name="userName"><br>
-	<input type ="submit" value="Login">
+	Password
+	<input type = "password" name="psword"><br>
+    <input type ="submit" value="Login">
 </form>
 </body>
 </html>
